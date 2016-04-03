@@ -15,7 +15,7 @@
   (let [ch (cf)]
     (go (loop [elem (<! ch)] (hf elem) (recur (<! ch))))
     ))
-
+ 
 
 (defn process-cold-channel 
 	"Expects two functions cf a no arg to create the channel and hf a single arg to handle events placed on the channel" 
